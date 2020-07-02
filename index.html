@@ -4,6 +4,12 @@
   <h1>Fake Hemingway</h1>
   <div id="left">
     <textarea onkeypress="format()" name="" id="text-area" rows="10"></textarea>
+    <div 
+        id="fake_textarea" 
+        contenteditable="true" 
+        onkeypress="format()"
+        style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;">
+    </div>
     <!--<button onclick="format()">Test Me</button>-->
     <div id="output"></div>
   </div>

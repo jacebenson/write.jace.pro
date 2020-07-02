@@ -1,13 +1,15 @@
 (function() {
-  let inputArea = document.getElementById("text-area");
-  let text = `The app highlights lengthy, complex sentences and common errors; if you see a yellow sentence, shorten or split it. If you see a red highlight, your sentence is so dense and complicated that your readers will get lost trying to follow its meandering, splitting logic - try editing this sentence to remove the red.
+  
+  //let inputArea = document.getElementById("text-area");
+  let inputArea = document.getElementsByClassName("ql-editor");
+  let text = `The app highlights lengthy, complex sentences and common errors; if you see a yellow sentence, shorten or split it. If you see a red highlight, your sentence is so dense and complicated that your readers will get lost trying to follow its meandering, splitting logic - try editing this sentence to remove the red.\n
 You can utilize a shorter word in place of a purple one. Mouse over them for hints.
 Adverbs and weakening phrases are helpfully shown in blue. Get rid of them and pick words with force, perhaps.
 Phrases in green have been marked to show passive voice.
 You can format your text with the toolbar.
 Paste in something you're working on and edit away. Or, click the Write button and compose something new.`;
-  inputArea.value = text;
-
+  //inputArea.value = text;
+  inputArea.innerHTML = text;
   let data = {
     paragraphs: 0,
     sentences: 0,
@@ -31,10 +33,13 @@ Paste in something you're working on and edit away. Or, click the Write button a
       complex: 0
     };
     ("use strict");
-    let inputArea = document.getElementById("text-area");
-    let text = inputArea.value;
-    let paragraphs = text.split("\n");
+    //let inputArea = document.getElementById("text-area");
+    let inputArea = document.getElementsByClassName("ql-editor")[0];
+    //let text = inputArea.value;
+    let text = inputArea.innerHTML;
+    let paragraphs = text.split("\n\n");
     let outputArea = document.getElementById("output");
+    //let outputArea = document.getElementsByClassName("ql-editor")[0];
     let hardSentences = paragraphs.map(p => getDifficultSentences(p));
     let inP = hardSentences.map(para => `<p>${para}</p>`);
     data.paragraphs = paragraphs.length;
