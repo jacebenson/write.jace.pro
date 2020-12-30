@@ -1,7 +1,7 @@
 ---
-title: "worksheets-for-story-and-character-craft"
-subtitle: "A subtitle about worksheets-for-story-and-character-craft"
-summary: "Summary of worksheets-for-story-and-character-craft"
+title: "Worksheets post for story and characters"
+subtitle: "This is a dumping ground of online resources I've found on writing stories"
+summary: "Find the resources useful to you!"
 date: 2020-12-30T17:41:09.005Z
 ---
 
